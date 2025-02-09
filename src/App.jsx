@@ -5,14 +5,18 @@ import Header from "./components/Header/Header";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 // import MoviesPage from "./pages/MoviesPage/MoviesPage";
 import { Toaster } from "react-hot-toast";
-import MovieCast from "./components/MovieCast/MovieCast";
-import MovieReviews from "./components/MovieReviews/MovieReviews";
+// import MovieCast from "./components/MovieCast/MovieCast";
+// import MovieReviews from "./components/MovieReviews/MovieReviews";
 import { lazy, Suspense } from "react";
 
 const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
 const MoviesPage = lazy(() => import("./pages/MoviesPage/MoviesPage"));
 const MovieDetailsPage = lazy(() =>
   import("./pages/MovieDetailsPage/MovieDetailsPage")
+);
+const MovieCast = lazy(() => import("./components/MovieCast/MovieCast"));
+const MovieReviews = lazy(() =>
+  import("./components/MovieReviews/MovieReviews")
 );
 
 const App = () => {
