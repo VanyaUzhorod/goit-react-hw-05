@@ -1,0 +1,27 @@
+.listHeader {
+  display: flex;
+  gap: 20px;
+  padding-left: 20px;
+}
+.container {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+
+  background: black;
+}
+
+.headerName {
+  color: azure;
+}
+
+.headerNavItem {
+  font-size: 20px;
+}
+
+.link {
+  color: azure;
+}
+.active {
+  color: tomato;
+}

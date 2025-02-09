@@ -1,0 +1,20 @@
+.wraper {
+  display: flex;
+}
+
+.castList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.castIteam {
+  display: flex;
+  flex-direction: column;
+  max-width: 150px;
+}
+
+.castImg {
+  width: 150px;
+  height: 200px;
+}

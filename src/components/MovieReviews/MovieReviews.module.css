@@ -1,0 +1,18 @@
+.reviewList {
+  display: flex;
+  padding: 20px;
+  padding-top: 0;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.reviewItrem {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+}
+
+.reviewItrem p {
+  text-align: start;
+}

@@ -1,0 +1,14 @@
+.iteamContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.trendContainer {
+  max-width: 400px;
+  min-width: 350px;
+}
+.rating {
+  display: flex;
+  text-align: ri;
+  justify-content: left;
+  color: black;
+}
