@@ -1,8 +1,10 @@
 import { useState } from "react";
 import toast from "react-hot-toast";
 import s from "./SearchBar.module.css";
+import { useSearchParams } from "react-router-dom";
 const SearchBar = ({ request }) => {
-  const [query, setQuery] = useState("");
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [query, setQuery] = useState(searchParams.get("query") || "");
 
   const handleQuery = (evt) => {
     setQuery(evt.target.value.trim());
@@ -10,6 +12,7 @@ const SearchBar = ({ request }) => {
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
+    updateSearchParams("query", query);
     if (!query || "") {
       toast("I'm waiting for your request", {
         icon: "👏",
@@ -25,6 +28,12 @@ const SearchBar = ({ request }) => {
     }
     request(query);
     setQuery("");
+  };
+
+  const updateSearchParams = (key, value) => {
+    const updatedParams = new URLSearchParams(searchParams);
+    updatedParams.set(key, value);
+    setSearchParams(updatedParams);
   };
 
   return (
