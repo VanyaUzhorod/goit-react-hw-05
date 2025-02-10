@@ -42,7 +42,7 @@ const MovieCast = () => {
                 src={
                   actor.profile_path
                     ? `https://image.tmdb.org/t/p/w200${actor.profile_path}`
-                    : "https://via.placeholder.com/100x150?text=No+Image"
+                    : "https://api.themoviedb.org/3/movie/550/images?language=en-US&include_image_language=en,null"
                 }
                 alt={actor.original_name}
               />

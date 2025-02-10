@@ -3,6 +3,7 @@ import fechMovie from "../../services/api";
 import toast from "react-hot-toast";
 import TrendMoviesList from "../../components/TrendMoviesList/TrendMoviesList";
 import s from "./HomePage.module.css";
+// import LoadMoreBtn from "../../components/LoadMoreBtn/LoadMoreBtn";
 
 const HomePage = () => {
   const [trendMovies, setTrendMovies] = useState([]);
@@ -29,6 +30,8 @@ const HomePage = () => {
   console.log(trendMovies);
   return (
     <section className={s.homeSection}>
+      {/* <LoadMoreBtn /> */}
+
       <TrendMoviesList trendMovies={trendMovies} />
     </section>
   );

@@ -4,12 +4,12 @@ import s from "./SearchBar.module.css";
 const SearchBar = ({ request }) => {
   const [query, setQuery] = useState("");
 
-  const handleQuery = (e) => {
-    setQuery(e.target.value.trim());
+  const handleQuery = (evt) => {
+    setQuery(evt.target.value.trim());
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (evt) => {
+    evt.preventDefault();
     if (!query || "") {
       toast("I'm waiting for your request", {
         icon: "👏",
@@ -33,12 +33,14 @@ const SearchBar = ({ request }) => {
         <input
           className={s.input}
           onChange={handleQuery}
+          name="query"
           value={query}
           type="text"
           autoComplete="off"
           autoFocus
-          placeholder="Search images"
+          placeholder="Search Movies"
         />
+
         <button className={s.buttonSearch} type="submit">
           Search
         </button>
